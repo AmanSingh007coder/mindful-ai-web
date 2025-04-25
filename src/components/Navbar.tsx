@@ -16,6 +16,13 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-background/95 backdrop-blur-md shadow-md' : 'bg-transparent'}`}>
       <div className="container mx-auto px-4 md:px-6">
@@ -27,6 +34,29 @@ const Navbar = () => {
             </Link>
           </div>
           
+          {/* Desktop menu */}
+          <div className="hidden md:flex items-center space-x-4">
+            <Link to="/" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300 glow-effect px-3 py-2">
+              Home
+            </Link>
+            <button 
+              onClick={() => scrollToSection('about')} 
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300 glow-effect px-3 py-2"
+            >
+              About
+            </button>
+            <Link to="/leaderboard" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300 glow-effect px-3 py-2 flex items-center">
+              <Award className="h-4 w-4 mr-1" />
+              Leaderboard
+            </Link>
+            <Link to="/user" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300 glow-effect px-3 py-2">
+              User Page
+            </Link>
+            <Button variant="ghost" size="icon" className="glow-effect">
+              <UserRound className="h-5 w-5" />
+            </Button>
+          </div>
+
           {/* Mobile menu button */}
           <div className="flex md:hidden">
             <Button variant="ghost" size="icon" aria-label="Toggle menu">
@@ -35,33 +65,9 @@ const Navbar = () => {
               </svg>
             </Button>
           </div>
-          
-          {/* Desktop menu */}
-          <div className="hidden md:flex space-x-4">
-            <NavItem href="/" label="Home" />
-            <NavItem href="#about" label="About" />
-            <NavItem href="/leaderboard" label="Leaderboard" icon={<Award className="h-4 w-4 mr-1" />} />
-            <NavItem href="#user" label="UserPage" />
-            <NavItem href="#login" label="Login" />
-            <Button variant="ghost" size="icon" className="glow-effect">
-              <UserRound className="h-5 w-5" />
-            </Button>
-          </div>
         </div>
       </div>
     </nav>
-  );
-};
-
-const NavItem = ({ href, label, icon }: { href: string; label: string; icon?: React.ReactNode }) => {
-  return (
-    <Link
-      to={href}
-      className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300 glow-effect px-3 py-2 flex items-center"
-    >
-      {icon}
-      {label}
-    </Link>
   );
 };
 
