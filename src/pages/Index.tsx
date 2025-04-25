@@ -1,11 +1,10 @@
 
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import CallToAction2 from "@/components/CallToAction";
+import CallToAction2 from "@/components/CallToAction2";
 import About from "@/components/About";
 import Feedback from "@/components/Feedback";
 import Vision from "@/components/Vision";
-import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -18,7 +17,7 @@ const Index = () => {
         <About />
         <Feedback />
         <Vision />
-        <CallToAction />
+       
       </main>
       <Footer />
     </div>
