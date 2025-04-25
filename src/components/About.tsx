@@ -4,8 +4,8 @@ const About = () => {
     <section id="about" className="py-12 md:py-24 bg-secondary/30">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">Our Concept</h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-eco-400 to-cyan-400 rounded-full mb-6"></div>
+          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#8B5CF6] to-[#0EA5E9] text-transparent bg-clip-text mb-4">Our Concept</h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-[#8B5CF6] to-[#0EA5E9] rounded-full mb-6"></div>
           <p className="text-lg text-muted-foreground max-w-[800px]">
             We're on a mission to make artificial intelligence more sustainable and environmentally conscious.
           </p>

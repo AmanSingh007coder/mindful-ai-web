@@ -41,11 +41,11 @@ const Vision = () => {
             </div>
             
             <div className="pt-4 animate-slide-in" style={{ animationDelay: '0.8s' }}>
-              {/* <Button 
+               <Button 
                 className="bg-gradient-to-r from-eco-500 to-eco-600 hover:from-eco-600 hover:to-eco-700 animate-glow text-lg px-8 py-6 h-auto"
               >
                 Try Now
-              </Button> */}
+              </Button> 
             </div>
           </div>
         </div>
