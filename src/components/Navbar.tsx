@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { UserRound } from 'lucide-react';
 
@@ -21,9 +22,9 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="#" className="flex items-center">
+            <Link to="/" className="flex items-center">
               <span className="text-lg font-bold gradient-text">EcoAI</span>
-            </a>
+            </Link>
           </div>
           
           {/* Mobile menu button */}
@@ -37,10 +38,11 @@ const Navbar = () => {
           
           {/* Desktop menu */}
           <div className="hidden md:flex space-x-4">
-            <NavItem href="#home" label="Home" />
-            <NavItem href="#about" label="About" />
-            <NavItem href="#user" label="UserPage" />
-            <NavItem href="#login" label="Login" />
+            <NavItem to="/" label="Home" />
+            <NavItem to="/about" label="About" />
+            <NavItem to="/user" label="UserPage" />
+            <NavItem to="/leaderboard" label="Leaderboard" />
+            <NavItem to="/login" label="Login" />
             <Button variant="ghost" size="icon" className="glow-effect">
               <UserRound className="h-5 w-5" />
             </Button>
@@ -51,14 +53,14 @@ const Navbar = () => {
   );
 };
 
-const NavItem = ({ href, label }: { href: string; label: string }) => {
+const NavItem = ({ to, label }: { to: string; label: string }) => {
   return (
-    <a
-      href={href}
+    <Link
+      to={to}
       className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300 glow-effect px-3 py-2"
     >
       {label}
-    </a>
+    </Link>
   );
 };
 
