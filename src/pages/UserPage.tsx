@@ -12,7 +12,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Zap, Droplet, Trash2, Share2, Download, QrCode } from "lucide-react";
+import { Zap, Droplet, Trash2, Share2, Download, QrCode, FireExtinguisher, Timer } from "lucide-react";
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 
 // Mock data for the chart
@@ -41,7 +41,7 @@ const UserPage = () => {
               className="rounded-full border-4 border-eco-400/30"
             />
           </div>
-          <h1 className="text-2xl font-bold gradient-text mb-2">EcoWarrior</h1>
+          <h1 className="text-2xl font-bold gradient-text mb-2">Sunita</h1>
         </div>
 
         {/* Impact Summary Section */}
@@ -62,8 +62,8 @@ const UserPage = () => {
           <Card className="bg-card/50 backdrop-blur">
             <CardHeader>
               <CardTitle className="text-lg flex items-center gap-2">
-                <Droplet className="h-5 w-5 text-blue-400" />
-                Water Savings
+                <FireExtinguisher className="h-5 w-5 text-blue-400" />
+                Carbon Savings
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -75,8 +75,8 @@ const UserPage = () => {
           <Card className="bg-card/50 backdrop-blur">
             <CardHeader>
               <CardTitle className="text-lg flex items-center gap-2">
-                <Trash2 className="h-5 w-5 text-purple-400" />
-                Waste Reduced
+                <Timer className="h-5 w-5 text-purple-400" />
+                Time Reduced
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -86,54 +86,54 @@ const UserPage = () => {
           </Card>
         </div>
 
-        {/* Eco-Saver Stats */}
-        <Card className="mb-12 bg-gradient-to-br from-eco-900/50 to-eco-800/30 backdrop-blur border-eco-700">
-          <CardHeader>
-            <CardTitle>Total Impact</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="text-center">
-              <h3 className="text-4xl font-bold text-gradient mb-2">365 kg CO₂</h3>
-              <p className="text-eco-400">Total Carbon Emissions Saved</p>
-              <div className="mt-4 flex flex-wrap gap-2 justify-center">
-                <Badge variant="outline" className="bg-green-500/10 text-green-400">
-                  🎉 3kg CO₂ saved today!
-                </Badge>
-                <Badge variant="outline" className="bg-eco-500/10 text-eco-400">
-                  🌿 Monthly milestone reached!
-                </Badge>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
+        {/* //  Eco-Saver Stats  */}
+<Card className="mb-12 bg-gradient-to-br from-eco-900/50 to-eco-800/30 backdrop-blur border-eco-700">
+<CardHeader>
+  <CardTitle>Total Impact</CardTitle>
+</CardHeader>
+<CardContent>
+  <div className="text-center">
+    <h3 className="text-4xl font-bold text-gradient mb-2">365 kg CO₂</h3>
+    <p className="text-eco-400">Total Carbon Emissions Saved</p>
+    <div className="mt-4 flex flex-wrap gap-2 justify-center">
+      <Badge variant="outline" className="bg-green-500/10 text-green-400">
+        🎉 3kg CO₂ saved today!
+      </Badge>
+      <Badge variant="outline" className="bg-eco-500/10 text-eco-400">
+        🌿 Monthly milestone reached!
+      </Badge>
+    </div>
+  </div>
+</CardContent>
+</Card>
 
-        {/* Eco Card */}
-        <Card className="mb-12 bg-gradient-to-br from-eco-800/50 to-eco-900/30 backdrop-blur">
-          <CardHeader>
-            <CardTitle>Share Your Impact</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="p-6 border border-eco-700/50 rounded-lg bg-eco-900/50 backdrop-blur">
-              <h3 className="text-2xl font-bold text-gradient mb-4">EcoWarrior's Green Journey 🌍</h3>
-              <p className="text-xl mb-4">365 kg CO₂ Saved</p>
-              <p className="text-eco-400 italic">"On my way to a greener future!"</p>
-              <div className="mt-6 flex gap-4 justify-center">
-                <Button variant="outline" className="gap-2">
-                  <Share2 className="h-4 w-4" />
-                  Share
-                </Button>
-                <Button variant="outline" className="gap-2">
-                  <Download className="h-4 w-4" />
-                  Download
-                </Button>
-                <Button variant="outline" className="gap-2">
-                  <QrCode className="h-4 w-4" />
-                  QR Code
-                </Button>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
+{/* //  Eco Card  */}
+<Card className="mb-12 bg-gradient-to-br from-eco-800/50 to-eco-900/30 backdrop-blur">
+<CardHeader>
+  <CardTitle>Share Your Impact</CardTitle>
+</CardHeader>
+<CardContent>
+  <div className="p-6 border border-eco-700/50 rounded-lg bg-eco-900/50 backdrop-blur">
+    <h3 className="text-2xl font-bold text-gradient mb-4">EcoWarrior's Green Journey 🌍</h3>
+    <p className="text-xl mb-4">365 kg CO₂ Saved</p>
+    <p className="text-eco-400 italic">"On my way to a greener future!"</p>
+    <div className="mt-6 flex gap-4 justify-center">
+      <Button variant="outline" className="gap-2">
+        <Share2 className="h-4 w-4" />
+        Share
+      </Button>
+      <Button variant="outline" className="gap-2">
+        <Download className="h-4 w-4" />
+        Download
+      </Button>
+      <Button variant="outline" className="gap-2">
+        <QrCode className="h-4 w-4" />
+        QR Code
+      </Button>
+    </div>
+  </div>
+</CardContent>
+</Card>
 
         {/* Progress Graph */}
         <Card className="mb-12">
@@ -188,13 +188,13 @@ const UserPage = () => {
             "Small steps = Big change"
           </p>
           <div className="flex justify-center gap-4">
-            <Button variant="ghost" size="sm">
+            <Button className='text-[#1DA1F2]' variant="ghost" size="sm">
               Twitter
             </Button>
-            <Button variant="ghost" size="sm">
+            <Button className='text-[#0077B5]' variant="ghost" size="sm">
               LinkedIn
             </Button>
-            <Button variant="ghost" size="sm">
+            <Button className='text-[#1877F2]'variant="ghost" size="sm">
               Facebook
             </Button>
           </div>
@@ -206,3 +206,55 @@ const UserPage = () => {
 };
 
 export default UserPage;
+
+
+
+
+// //  Eco-Saver Stats 
+// <Card className="mb-12 bg-gradient-to-br from-eco-900/50 to-eco-800/30 backdrop-blur border-eco-700">
+// <CardHeader>
+//   <CardTitle>Total Impact</CardTitle>
+// </CardHeader>
+// <CardContent>
+//   <div className="text-center">
+//     <h3 className="text-4xl font-bold text-gradient mb-2">365 kg CO₂</h3>
+//     <p className="text-eco-400">Total Carbon Emissions Saved</p>
+//     <div className="mt-4 flex flex-wrap gap-2 justify-center">
+//       <Badge variant="outline" className="bg-green-500/10 text-green-400">
+//         🎉 3kg CO₂ saved today!
+//       </Badge>
+//       <Badge variant="outline" className="bg-eco-500/10 text-eco-400">
+//         🌿 Monthly milestone reached!
+//       </Badge>
+//     </div>
+//   </div>
+// </CardContent>
+// </Card>
+
+// //  Eco Card 
+// <Card className="mb-12 bg-gradient-to-br from-eco-800/50 to-eco-900/30 backdrop-blur">
+// <CardHeader>
+//   <CardTitle>Share Your Impact</CardTitle>
+// </CardHeader>
+// <CardContent>
+//   <div className="p-6 border border-eco-700/50 rounded-lg bg-eco-900/50 backdrop-blur">
+//     <h3 className="text-2xl font-bold text-gradient mb-4">EcoWarrior's Green Journey 🌍</h3>
+//     <p className="text-xl mb-4">365 kg CO₂ Saved</p>
+//     <p className="text-eco-400 italic">"On my way to a greener future!"</p>
+//     <div className="mt-6 flex gap-4 justify-center">
+//       <Button variant="outline" className="gap-2">
+//         <Share2 className="h-4 w-4" />
+//         Share
+//       </Button>
+//       <Button variant="outline" className="gap-2">
+//         <Download className="h-4 w-4" />
+//         Download
+//       </Button>
+//       <Button variant="outline" className="gap-2">
+//         <QrCode className="h-4 w-4" />
+//         QR Code
+//       </Button>
+//     </div>
+//   </div>
+// </CardContent>
+// </Card>
