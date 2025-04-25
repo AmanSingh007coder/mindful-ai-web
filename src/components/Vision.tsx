@@ -1,5 +1,7 @@
 
+
 import { Button } from "@/components/ui/button";
+import img3 from './img2.png'
 
 const Vision = () => {
   return (
@@ -8,15 +10,12 @@ const Vision = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="relative animate-slide-in">
             <div className="absolute -inset-4 bg-gradient-to-br from-eco-500/20 to-cyan-500/20 rounded-2xl blur-lg"></div>
-            <img
-              src="https://images.unsplash.com/photo-1531297484001-80022131f5a1"
-              alt="Digital Sustainability"
-              className="relative rounded-xl object-cover w-full h-full aspect-square md:aspect-[4/3] mix-blend-luminosity"
+            <img src={img3} alt="Digital Sustainability" className="relative rounded-xl object-cover w-full h-full aspect-square md:aspect-[4/3] mix-blend-luminosity"
             />
           </div>
           
           <div className="space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold gradient-text animate-slide-in">Our Vision</h2>
+            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#8B5CF6] to-[#0EA5E9] text-transparent bg-clip-text">Our Vision</h2>
             <p className="text-lg text-muted-foreground animate-slide-in" style={{ animationDelay: '0.2s' }}>
               We envision a future where technological advancement and environmental responsibility go hand in hand. EcoAI is committed to pioneering sustainable AI practices.
             </p>
@@ -42,11 +41,11 @@ const Vision = () => {
             </div>
             
             <div className="pt-4 animate-slide-in" style={{ animationDelay: '0.8s' }}>
-              <Button 
+              {/* <Button 
                 className="bg-gradient-to-r from-eco-500 to-eco-600 hover:from-eco-600 hover:to-eco-700 animate-glow text-lg px-8 py-6 h-auto"
               >
                 Try Now
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>
