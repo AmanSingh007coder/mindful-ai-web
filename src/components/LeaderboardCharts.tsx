@@ -33,21 +33,21 @@ const userGrowthData = [
 
 // Mock data for environmental impact
 const environmentalImpactData = [
-  { category: 'CO₂ Saved (tons)', value: 22000 },
-  { category: 'Trees Planted', value: 15000 },
-  { category: 'Water Saved (kL)', value: 35000 },
-  { category: 'Energy Saved (kWh)', value: 84000 },
-  { category: 'Waste Recycled (tons)', value: 9500 },
+  { category: 'CO₂ Saved (kgs)', value: 40000 },
+  { category: 'NOₓ Saved(mg)', value: 50000 },
+  { category: 'Energy Saved(MWt)', value: 25000 },
+  { category: 'Thermal Energy(MWh)', value: 20000 },
+  { category: 'Water saved(kl)', value: 75000 },
 ];
 
 // Mock data for category distribution
 const categoryDistributionData = [
-  { name: 'Energy Savers', value: 35 },
-  { name: 'Green Commuters', value: 25 },
-  { name: 'Tree Planters', value: 15 },
-  { name: 'Zero Waste', value: 10 },
-  { name: 'Water Conservers', value: 8 },
-  { name: 'Recycling Masters', value: 7 },
+  { name: 'CO₂ Emission Savings	', value: 37 },
+  { name: 'Water Saved', value: 28 },
+  { name: 'Thermal energy saved', value: 15 },
+  { name: 'Energy saved', value: 12 },
+  { name: 'NOₓ Emission Savings', value: 5 },
+  { name: 'Other Emission Redeced', value: 3 },
 ];
 
 // Chart config

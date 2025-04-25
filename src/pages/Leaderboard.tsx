@@ -170,7 +170,7 @@ const Leaderboard = () => {
       <div className="container mx-auto px-4">
         {/* Header Section */}
         <div className="text-center mb-12 animate-fade-in">
-          <h1 className="text-4xl md:text-5xl font-bold gradient-text mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold  bg-gradient-to-r from-[#8B5CF6] to-[#0EA5E9] text-transparent bg-clip-text mb-4">
             Global Green Leaderboard
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -414,10 +414,9 @@ const Leaderboard = () => {
             <Card className="bg-eco-600/10">
               <CardContent className="pt-6">
                 <TreeDeciduous className="h-10 w-10 mb-4 mx-auto text-eco-400" />
-                <h4 className="font-medium mb-2">Plant More Trees</h4>
+                <h4 className="font-medium mb-2"> Support Green AI Platforms</h4>
                 <p className="text-sm text-muted-foreground">
-                  Participate in community tree planting events or sponsor trees
-                  through our partners.
+                Choose AI tools backed by companies that invest in carbon neutrality, renewable energy, and ethical AI practices
                 </p>
               </CardContent>
             </Card>
