@@ -41,7 +41,7 @@ const Navbar = () => {
             <NavItem href="/" label="Home" />
             <NavItem href="#about" label="About" />
             <NavItem href="/leaderboard" label="Leaderboard" icon={<Award className="h-4 w-4 mr-1" />} />
-            <NavItem href="#user" label="UserPage" />
+            <NavItem href="/user" label="UserPage" />
             <NavItem href="#login" label="Login" />
             <Button variant="ghost" size="icon" className="glow-effect">
               <UserRound className="h-5 w-5" />
