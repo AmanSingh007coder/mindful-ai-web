@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,6 +53,19 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				eco: {
+					'50': '#ecfdf4',
+					'100': '#c9f9e0',
+					'200': '#9cf0c8',
+					'300': '#65e0ac',
+					'400': '#34ca8e',
+					'500': '#17b176',
+					'600': '#098f5f',
+					'700': '#087250',
+					'800': '#095a41',
+					'900': '#094a37',
+					'950': '#042921',
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -84,11 +98,30 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'glow': {
+					'0%, 100%': {
+						boxShadow: '0 0 5px rgba(34, 211, 238, 0.3), 0 0 10px rgba(34, 211, 238, 0.2)'
+					},
+					'50%': {
+						boxShadow: '0 0 15px rgba(34, 211, 238, 0.6), 0 0 20px rgba(34, 211, 238, 0.4)'
+					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'slide-in': {
+					'0%': { transform: 'translateY(20px)', opacity: '0' },
+					'100%': { transform: 'translateY(0)', opacity: '1' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'glow': 'glow 2s ease-in-out infinite',
+				'float': 'float 5s ease-in-out infinite',
+				'slide-in': 'slide-in 0.5s ease-out forwards'
 			}
 		}
 	},
