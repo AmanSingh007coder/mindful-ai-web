@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import person1 from './images.png';
+
 
 const Feedback = () => {
   const [name, setName] = useState('');
@@ -23,8 +25,8 @@ const Feedback = () => {
     <section id="feedback" className="py-12 md:py-24">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">User Feedback</h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-eco-400 to-cyan-400 rounded-full mb-6"></div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-[#8B5CF6] to-[#0EA5E9] text-transparent bg-clip-text">User Feedback</h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-[#8B5CF6] to-[#0EA5E9]  rounded-full mb-6"></div>
           <p className="text-lg text-muted-foreground max-w-[800px]">
             Hear what our users have to say about their experience with our sustainable AI solutions.
           </p>
@@ -40,8 +42,11 @@ const Feedback = () => {
               >
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center mr-4">
-                    <span className="text-lg font-semibold">{testimonial.name.charAt(0)}</span>
+                  <img src={person1} alt="Digital Sustainability" className='"w-12 h-12 rounded-full bg-muted flex items-center justify-center mr-4"'/>
+
+                  {/* <span className="text-lg font-semibold">{testimonial.name.charAt(0)}</span> */}
                   </div>
+                
                   <div>
                     <h4 className="text-lg font-semibold">{testimonial.name}</h4>
                     <p className="text-sm text-muted-foreground">{testimonial.role}</p>
@@ -110,7 +115,7 @@ const testimonials = [
     comment: "The performance is just as good as other AI platforms, but knowing my work has a smaller environmental impact makes a huge difference to me."
   },
   {
-    name: "Sophia Rodriguez",
+    name: "Alex Carry",
     role: "Sustainability Officer",
     comment: "EcoAI has been instrumental in helping our company meet our environmental goals while still leveraging cutting-edge AI technology."
   }
