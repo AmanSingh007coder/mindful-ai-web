@@ -1,6 +1,8 @@
 
 import { useState } from 'react';
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Avatar1 from "@/components/ui/avatar1.jpg"
 import {
   Card,
   CardContent,
@@ -34,7 +36,7 @@ const UserPage = () => {
         <div className="mb-12 text-center">
           <div className="relative w-32 h-32 mx-auto mb-4">
             <img
-              src="/placeholder.svg"
+              src={Avatar1}
               alt="Profile"
               className="rounded-full border-4 border-eco-400/30"
             />
@@ -198,6 +200,7 @@ const UserPage = () => {
           </div>
         </div>
       </main>
+      <Footer/>
     </div>
   );
 };
