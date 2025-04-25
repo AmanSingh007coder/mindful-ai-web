@@ -1,8 +1,8 @@
 
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
-import { UserRound } from 'lucide-react';
+import { UserRound, Award } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -38,11 +38,11 @@ const Navbar = () => {
           
           {/* Desktop menu */}
           <div className="hidden md:flex space-x-4">
-            <NavItem to="/" label="Home" />
-            <NavItem to="/about" label="About" />
-            <NavItem to="/user" label="UserPage" />
-            <NavItem to="/leaderboard" label="Leaderboard" />
-            <NavItem to="/login" label="Login" />
+            <NavItem href="/" label="Home" />
+            <NavItem href="#about" label="About" />
+            <NavItem href="/leaderboard" label="Leaderboard" icon={<Award className="h-4 w-4 mr-1" />} />
+            <NavItem href="#user" label="UserPage" />
+            <NavItem href="#login" label="Login" />
             <Button variant="ghost" size="icon" className="glow-effect">
               <UserRound className="h-5 w-5" />
             </Button>
@@ -53,12 +53,13 @@ const Navbar = () => {
   );
 };
 
-const NavItem = ({ to, label }: { to: string; label: string }) => {
+const NavItem = ({ href, label, icon }: { href: string; label: string; icon?: React.ReactNode }) => {
   return (
     <Link
-      to={to}
-      className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300 glow-effect px-3 py-2"
+      to={href}
+      className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300 glow-effect px-3 py-2 flex items-center"
     >
+      {icon}
       {label}
     </Link>
   );
